@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:includeLightning /> 
+    <div id="satish">
+        
+    </div>
+    <script>
+        $Lightning.use("c:Out_App_1", function() {
+          $Lightning.createComponent("ui:button",
+          		{ label : "Press Me!" },
+          	"satish",
+          function(cmp) {
+            // do some stuff
+          });
+        });
+    </script>
+    
+</apex:page>

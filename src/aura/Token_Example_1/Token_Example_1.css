@@ -1,0 +1,11 @@
+.THIS p {
+    font-family: token(myBodyTextFontFace);
+    font-weight: token(myBodyTextFontWeight);
+}
+
+.THIS.box{
+    background: token(bgcolor);
+    width:token(mywidth);
+    height:token(myheight);
+    border:token(myborder);
+}

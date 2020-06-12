@@ -1,0 +1,7 @@
+<aura:component >
+	<div class="box">
+        Name  : Satish  <br/>
+        Phone :040-12333<br/>
+        City  :Hyd 
+    </div>
+</aura:component>

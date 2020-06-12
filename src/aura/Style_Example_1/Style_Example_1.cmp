@@ -1,0 +1,17 @@
+<aura:component >
+	<div>
+        This is Line one <br/> 
+        This is line two <br/>
+        This is line three
+    </div>
+    <div class="box">
+        This is Line one <br/> 
+        This is line two <br/>
+        This is line three
+    </div>
+    <div class="redbox">
+        This is Line one <br/> 
+        This is line two <br/>
+        This is line three
+    </div>
+</aura:component>

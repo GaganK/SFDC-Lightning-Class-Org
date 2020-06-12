@@ -1,0 +1,20 @@
+<apex:page id="page">
+    <apex:includeLightning />
+    <div id="one">
+        
+    </div>
+    
+    <script>
+    	$Lightning.use("c:VF_App_2", function(){
+        	$Lightning.createComponent("c:VF_Comp_1",
+                                       	{},
+                                        "one",
+                                       	function(cmp){
+                                            
+                                        	cmp.set("v.name","Satish");
+                                            cmp.set("v.age",30);
+                                        }
+                                       );
+        });
+    </script>
+</apex:page>

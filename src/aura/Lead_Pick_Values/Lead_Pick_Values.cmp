@@ -1,0 +1,6 @@
+<aura:component controller="Schema_Example">
+	<aura:attribute name="objName" type="String" />
+    <aura:attribute name="fldName" type="String" />
+    <aura:attribute name="fldOptions" type="String[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}" />
+</aura:component>

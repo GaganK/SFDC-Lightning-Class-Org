@@ -1,0 +1,21 @@
+.THIS p{
+    background:yellow;
+    color:red;
+}
+
+.THIS h1{
+    background:black;
+    color:white;
+}
+.THIS.h1Class {
+    color: Red;
+    font-weight: bold;
+}
+ 
+.THIS.PClass {
+    color: Blue;
+    font-weight: bold;
+}
+.THIS.one{
+    background:red;
+}

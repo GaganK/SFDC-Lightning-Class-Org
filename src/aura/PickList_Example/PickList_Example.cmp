@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:attribute name="myVal" type="String" />
+    <aura:attribute name="names" type="String[]" default="['Sam','Ram','Kiran']" />
+	 <lightning:select name="select1" label="How many tickets?" required="true" value="{!v.myVal}">
+        <option value="">choose one...</option>
+        <option value="1">one</option>
+        <option value="2">two</option>
+        <option value="3">three</option>
+    </lightning:select>
+    <lightning:select name="select2" label="Names" >
+    	<aura:iteration items="{!v.names}" var="a">
+        	<option value="{!a}">{!a}</option>
+        </aura:iteration>
+    </lightning:select>
+</aura:component>

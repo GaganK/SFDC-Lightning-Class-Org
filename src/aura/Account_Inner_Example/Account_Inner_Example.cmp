@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="ID" />
+    <aura:attribute name="myFields" type="String[]" default="Name,StageName,CloseDate" />
+    <aura:attribute name="simpleRecord" type="Object" />
+    <aura:attribute name="error" type="String" />
+     <force:recordData aura:id="abc"
+        recordId="{!v.recordId}"
+        fields="{!v.myFields}"
+        mode="EDIT"
+        targetFields="{!v.simpleRecord}"
+        targetError="{!v.error}" />
+       <div>
+           <lightning:input label="AccountName" value="{!v.simpleRecord.Name}" />
+           <lightning:input label="StageName" value="{!v.simpleRecord.StageName}" />
+       </div>
+</aura:component>

@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="searchText" type="String" />
+    <aura:registerEvent name="accSearch" type="c:App_Event_Two" />
+    <div class="box">
+        <lightning:input label="Account Name" value="{!v.searchText}" />
+        <lightning:button label="Search" onclick="{!c.invoke}" />
+    </div>
+</aura:component>

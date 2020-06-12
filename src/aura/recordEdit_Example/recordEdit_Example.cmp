@@ -1,0 +1,19 @@
+<aura:component implements="lightning:actionOverride,force:hasRecordId,force:hasSObjectName">
+    
+    <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Opportunity">
+        <div class="slds-box">
+            <lightning:outputField fieldName="Name" />
+            <lightning:outputField fieldName="Amount" />
+            <lightning:outputField fieldName="CloseDate" />
+            <lightning:outputField fieldName="Description" />
+            <lightning:outputField fieldName="ExpectedRevenue" />
+            <lightning:outputField fieldName="StageName" />
+            <lightning:outputField fieldName="Probability" />
+            <lightning:outputField fieldName="Type" />
+            <lightning:outputField fieldName="CurrentGenerators__c" />
+            <lightning:outputField fieldName="TrackingNumber__c" />
+            
+        </div>
+    </lightning:recordViewForm>
+    
+</aura:component>

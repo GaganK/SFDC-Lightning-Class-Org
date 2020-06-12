@@ -1,0 +1,3 @@
+<apex:page >
+    <flow:interview name="Account_Flow_1" finishLocation="Page1"> </flow:interview>
+</apex:page>

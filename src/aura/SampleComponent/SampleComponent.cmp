@@ -1,0 +1,19 @@
+<aura:component>
+    <ltng:require styles="/resource/satish/bootstrap-3.3.7-dist/css/bootstrap.min.css" 
+                  scripts="{!join(',', 
+                            $Resource.jquery224 , 
+                            $Resource.satish + '/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+                            }" afterScriptsLoaded="{!c.scriptsLoaded}"/>
+    <div class='mynamespace'>
+        <div class="dropdown">
+            <div id="dLabel" type="button" class='btn btn-success' data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Some Menu
+                <span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li role="presentation"><a role="menuitem" href="">Action</a></li>
+                <li role="presentation"><a role="menuitem" href="">Another action</a></li>
+            </ul>
+        </div>
+    </div>
+</aura:component>

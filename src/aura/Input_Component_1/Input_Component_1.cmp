@@ -1,0 +1,20 @@
+<aura:component >
+    <lightning:card title="Student" iconName="standard:account">
+        <br/><br/>
+        <lightning:input label="Enter Name"  /> <br/>
+        <lightning:input label="Enter Age" type="number" /><br/>
+        <lightning:input label="Enter Place" type="text" placeholder="Hyd places" />
+        <br/><br/>
+    </lightning:card>
+    <lightning:card title="Student" iconName="standard:account">
+        <br/><br/>
+        <lightning:input label="Enter Name"  /> <br/>
+        <lightning:input label="Enter Age" type="number" /><br/>
+        <lightning:input label="Enter Place" type="text" placeholder="Hyd places" />
+        <br/><br/>
+        <aura:set attribute="actions">
+            <lightning:button label="submit" />
+            <lightning:button label="Cancel" />
+        </aura:set>
+    </lightning:card>
+</aura:component>

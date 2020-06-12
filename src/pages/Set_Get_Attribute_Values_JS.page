@@ -1,0 +1,124 @@
+<apex:page >
+    Setter_Getter for client-Side data using client-Side Controller
+    ====================================================================
+    1. In the lightning client-side data is stored in the attributes of a component.
+    2. If you want to read the values of attributes of the component in the client-side controller
+    		functionname : function(component,event,helper){
+    
+    		}
+    
+    	  component : This will reffer to component from which the client-side controller has fired .
+    
+    	  event     : This will reffer to event which has fired the action
+    	
+    	   helper   : helper function .
+    3. Getter :
+    		component.get("v.attributename");
+    	
+    4. setter 
+    		component.set("v.attributename",value);
+    ---------------------------------------------------------------
+    Example 1: Set the Data using client-Side controller
+  	----------------------------------------------------------------
+    1. Create a component : JS_Example_3.cmp
+    	<!--
+			<aura:component >
+                <aura:attribute name="empName" type="String" />
+                <aura:attribute name="salary" type="Decimal" />
+                <aura:attribute name="age" type="Integer" />
+                <aura:handler name="init" value="{!this}" action="{!c.show}" />
+                Name : {!v.empName} <br/>
+                Salary:{!v.salary} <br/>
+                Age  : {!v.age}
+            </aura:component>
+
+		-->
+    2. Create a client-side controller ..
+    	<!--
+			({
+                show : function(component, event, helper) {
+                    component.set("v.empName","Satish");
+                    component.set("v.salary",10000);
+                    component.set("v.age",40);
+                }
+            })
+
+		-->
+    
+    3. Create a Application  : 
+    	<!--
+			<aura:application >
+                <c:JS_Example_3 />
+            </aura:application>
+		-->
+    
+   =================================================================
+    Example :2: Get the values of an atrribute 
+    ==================================================================
+    1. Create a component : JS_Example_4
+    <!--
+		<aura:component >
+            <aura:attribute name="aval" type="Integer" />
+            <aura:attribute name="bval" type="Integer" />
+            <aura:attribute name="cval" type="Integer" />
+            <aura:handler name="init" value="{!this}" action="{!c.invoke}" />
+            AVal  : {!v.aval}  <br/><br/>
+            BVal  : {!v.bval}  <br/><br/>
+            CVal  : {!v.cval}
+        </aura:component>
+	-->
+    2. Create a client-side controller 
+    	<!--
+			({
+                invoke : function(component, event, helper) {
+                    var aval=component.get("v.aval");
+                    var bval=component.get("v.bval");
+                    var cval=aval+bval;
+                    component.set("v.cval",cval);
+                }
+			})
+		-->
+     3. Create a Application  
+    	<!--
+			<aura:application >
+                <c:JS_Example_4 aval="50" bval="30"/>
+            </aura:application>
+		-->
+    ==================================================================
+    Example :3 :
+    ================================================================
+    1. Create a component which has following attributes (amount,rate,years,intrest)
+    	<!--
+			<aura:component >
+                <aura:attribute name="amount" type="Decimal" />
+                <aura:attribute name="years" type="Decimal" />
+                <aura:attribute name="rate" type="Decimal" />
+                <aura:attribute name="intrest" type="Decimal" />
+                <aura:handler name="init" value="{!this}" action="{!c.calculate}" />
+                Amount : {!v.amount} <br/><br/>
+                Years  :{!v.years} <br/><br/>
+                Rate   :{!v.rate} <br/><br/>
+                Intrest:{!v.intrest} <br/>
+            </aura:component>
+
+		-->
+    2. Create a client side controller which will read the values of amount ,rate,years and calcualte 
+       intrest 
+    	<!--
+			({
+                calculate : function(component, event, helper) {
+                    var amount=component.get("v.amount");
+                    var rate=component.get("v.rate");
+                    var years=component.get("v.years");
+                    var intrest=(amount*rate*years)/100;
+                    component.set("v.intrest",intrest);
+                }
+            })
+		-->
+    3. Create a application which wil invoke component by passing amount,reate,year value
+    	<!--
+			<aura:application >
+                <c:JS_Example_5 amount="10000" years="2" rate="5" />
+            </aura:application>
+		-->
+</apex:page>

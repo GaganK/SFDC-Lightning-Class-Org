@@ -1,0 +1,140 @@
+<apex:page >
+    Lightning components :
+    ----------------------
+    1. It is a standard component defined by the lightning .
+    2. It is a re-usable unit in the application .
+    3. This will create functionality on the UI 
+    4. Using component we can build single line in the application or entire application.
+    5. Component can contain
+    	a.Other Components 
+    	b. Html
+    	c. CSS
+    	d. Scripting 
+    	e. Any other things that are supported by web.
+    
+    6. Components are classified as two types 
+    	a. Standard COmponent.
+    	b. Custom Component.
+    	
+   7. Standard Component.
+    	a. These are the components created by the salesforce 
+    	Example : 
+    	<!-- 	<aura:application >	,
+				<aura:component> ,	
+				<aura:handler> 
+				<aura:iteration>
+		-->
+    
+    8. Custom Components .
+    	a. Components created by the user as per business requirement .
+    	b. Every custom component will start and end with  <!-- <aura:component> -->
+    	c. Steps to create a custom component .
+    		Developer console
+    		|---> File 
+    			  |---> New 
+    					|--->Lightning Component 
+    	
+    		Step 1 : Component Name 
+    		Step 2 : Create 
+    	d. Component name will have an extention of ".cmp"
+    
+    	 Attributes
+            a. access	: 
+                1. This will specify the scope of the component.
+                2. Possible values are public ,global 
+                3. public  : If we define access as scope ,this component can be extended any where with in 
+                             the name space 
+                4. global  : If we define access as global ,this component can be extended within the namespace 
+                             and outside the namespace.
+                5. default access is public .
+            
+            b. controller :
+                1. This will specify the name of the apex class which we want to reffer in the component
+                2. We can define only one apex class as Controller.
+            
+            c. description : 	
+                1. This is a string value .
+                2. This is used to define the description about the component .
+            
+            d. extends  :
+                1. This will specify the name of the component which you want to extend with in this component.
+                2. We can only extend one component
+                3. Syntax : 
+                    extends="namespace:applicationname"
+                
+            e. extensible :
+                1. This is a boolean value 
+                2. When set as true ,this component can be extended by other component.
+                3. When set as false,this component cannot be extended 
+            
+            f. implements : 
+                1. This will specify the name of the interfaces which you want to implement in the 
+                   component.
+                2. Component can implements more  than one interface.
+            
+            g. template : 
+                1. Name of the template to be loaded in the component.
+    
+    		h. isTemplate : 
+    			1. it is a boolean value .
+    			2. When set as true ,this component will be a template .
+    
+    	Note : Component can be invoked from application or from different ui formats in lightning.
+    	
+    	1. If you want to invoke the component from the application  then
+    			<!--
+						<namepace:componentName />
+						Example : 
+						<capital:student>
+						
+				-->
+    	2. If there is no namespace we have to invoke it using default namespace 
+    			<!--
+						<c:componentName> 
+						Example :
+						<c:Student />
+				-->
+    
+    Example :1
+    1. Create a component : Component_1.cmp 
+    	<!--
+			<aura:component >
+                Name  : <br/><br/>
+                Phone : <br/><br/>
+                City  : <br/><br/>
+			</aura:component>
+		-->
+    2. Create a application and invoke the component 
+    	<!--
+			<aura:application >
+    			<c:Component_1 />
+			</aura:application>
+		-->
+    
+    Example :2 
+    1. Create a Custom Component : Component_2.cmp
+    	<!--
+			<aura:component >
+                Product Name : <br/><br/>
+                Product Price: <br/><br/>
+                Product Code : <br/><br/>
+                Product Quantity:
+			</aura:component>
+		-->
+    
+    2. Create a application to invoke the component : Component_App_2.cmp
+    	<!--
+			<aura:application >
+    			<c:component_2 />
+			</aura:application>
+		-->
+    
+    Example 3: 
+    1. Create a application to invoke multiple components 
+    	<!--
+			<aura:application >
+                <c:component_1 />
+                <c:component_2 />
+			</aura:application>
+		-->
+</apex:page>

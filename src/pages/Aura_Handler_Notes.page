@@ -1,0 +1,39 @@
+<apex:page >
+    Aura_Handler:
+    -------------
+    1. This is a pre-defined component.
+    2. This aura_handler will be fired before the content of the component is loaded.
+    3. Attributes : 
+    	a. name : 
+    	  1. init : Initialization
+    	b. value :
+    	   this : this is reffering to current component
+    
+    	c. action : What is the action we want to perform while loading .
+   -------------------------------------------------------------------------------
+    Example : 
+    -------------------------------------------------------------------------------
+    1. Create a component : JS_Example_2
+    	<!--
+			<aura:component >
+                <aura:handler name="init" value="{!this}" action="{!c.invoke}" />	
+            </aura:component>
+		-->
+    2. Create a client-side controller 
+     <!--
+    		({
+                invoke : function(component, event, helper) {
+                    alert('This is loaded from client');	
+                }
+            })
+		-->
+    
+    3. Create the application 
+    	<!--
+			<aura:application >
+                <c:JS_Example_2 />
+            </aura:application>
+		-->
+  
+   
+</apex:page>

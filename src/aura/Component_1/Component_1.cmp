@@ -1,0 +1,5 @@
+<aura:component >
+    Name  : <br/><br/>
+    Phone : <br/><br/>
+    City  : <br/><br/>
+</aura:component>

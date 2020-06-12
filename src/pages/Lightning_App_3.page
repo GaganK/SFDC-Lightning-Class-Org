@@ -1,0 +1,18 @@
+<apex:page >
+    <apex:includeLightning />
+    <div id="one">
+        
+      
+    </div>
+    <script>
+    	$Lightning.use("c:VF_Comp_App_3", function(){
+        	$Lightning.createComponent("c:VF_Comp_3",
+                                       	{},
+                                       	"one",
+                                         function(cmp){
+                                         	cmp.set("v.aval",10);
+                                            cmp.set("v.bval",10);
+                                         });
+        });
+    </script>
+</apex:page>

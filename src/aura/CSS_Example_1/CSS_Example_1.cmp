@@ -1,0 +1,5 @@
+<aura:component >
+	<div style="width:500px;height:200px;background:limegreen;border:1px solid grey;">
+    	<p style="margin-left:10px;color:yellow;background:red;">This is Example one </p>
+    </div>
+</aura:component>

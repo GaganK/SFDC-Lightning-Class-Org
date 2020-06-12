@@ -1,0 +1,6 @@
+<aura:application >
+	 <div style="background-color:black ; margin:12px">
+    <p style="color:white">white Text with black Background [Inline CSS]</p>
+    <p style="color:yellow">Yellow Text with black Background [Inline CSS]</p>  
+  </div>
+</aura:application>

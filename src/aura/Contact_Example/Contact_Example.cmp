@@ -1,0 +1,14 @@
+<aura:component controller="Contact_Insert">
+    <aura:attribute name="con" type="Contact" />
+    <aura:attribute name="status" type="String" />
+    <div class="box">
+        <lightning:input label="Last Name" value="{!v.con.lastName}" />
+        <lightning:input label="First Name" value="{!v.con.fisrtName}" />
+        <lightning:input label="Email" value="{!v.con.Email}" />
+        <lightning:input label="Phone" value="{!v.con.Phone}" />
+        <br/>
+        <lightning:button label="Create" onclick="{!c.show}" />
+        <br/>
+        {!v.status}
+    </div>
+</aura:component>

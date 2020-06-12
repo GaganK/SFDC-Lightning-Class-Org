@@ -1,0 +1,10 @@
+<aura:component controller="Account_Search_2">
+    <aura:attribute name="accounts" type="list" />
+    <aura:attribute name="columns" type="object" />
+    <div>
+        <lightning:input aura:id="indus" label="industry" />
+        <lightning:button label="Submit" onclick="{!c.show}" />
+        <br/><br/>
+        <lightning:dataTable keyField="id" data="{!v.accounts}" columns="{!v.column}"  hideCheckboxColumn="false"/>
+    </div>
+</aura:component>

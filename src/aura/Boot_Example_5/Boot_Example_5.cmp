@@ -1,0 +1,33 @@
+<aura:component >
+    <ltng:require styles="/resource/satish/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+      scripts="{!join(',', 
+        $Resource.jquery224 , 
+        $Resource.satish + '/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+      }" afterScriptsLoaded="{!c.scriptsLoaded}" />
+	<table class="table table-striped">
+         <thead>
+            <tr>
+               <th>Firstname</th>
+               <th>Lastname</th>
+               <th>Email</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>John</td>
+               <td>Doe</td>
+               <td>john@example.com</td>
+            </tr>
+            <tr>
+               <td>Mary</td>
+               <td>Moe</td>
+               <td>mary@example.com</td>
+            </tr>
+            <tr>
+               <td>July</td>
+               <td>Dooley</td>
+               <td>july@example.com</td>
+            </tr>
+         </tbody>
+      </table>
+</aura:component>

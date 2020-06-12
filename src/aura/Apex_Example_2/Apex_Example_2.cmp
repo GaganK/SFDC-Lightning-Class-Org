@@ -1,0 +1,8 @@
+<aura:component controller="Aura_Example_2">
+    <aura:attribute name="accounts" type="Account[]"  />
+    <aura:handler name="init" value="{!this}" action="{!c.call}" />
+    <aura:iteration items="{!v.accounts}" var="a">
+        <br/>
+    	<h1> {!a.Name} &nbsp;&nbsp;&nbsp;&nbsp;{!a.Industry} &nbsp;&nbsp;&nbsp;&nbsp;{!a.Phone} </h1>
+    </aura:iteration>
+</aura:component>

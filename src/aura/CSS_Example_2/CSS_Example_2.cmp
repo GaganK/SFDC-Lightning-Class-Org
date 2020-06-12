@@ -1,0 +1,10 @@
+<aura:component >
+	<div style="margin-left:20px;margin-top:20px;width:1000px;height:600px;border:2px solid black;">
+    	<div style="width:400px;height:500px;border:2px solid red;float:left;">
+        
+        </div>
+        <div style="width:400px;height:500px;border:2px solid red;float:right;">
+        
+        </div>
+    </div>
+</aura:component>

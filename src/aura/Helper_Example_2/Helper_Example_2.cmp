@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="aval" type="Integer" />
+    <aura:attribute name="bval" type="Integer" />
+    <aura:attribute name="cval" type="Integer" />
+    <lightning:input label="Enter AVal" aura:id="aval" />
+    <lightning:input label="Enter BVal" aura:id="bval" />
+    <lightning:button label="Mul" onclick="{!c.show}" />
+    <lightning:button label="Add" onclick="{!c.callMe}" /><br/><br/>
+    Aval : {!v.aval} <br/><br/>
+    BVal :{!v.bval} <br/><br/>
+    CVal :{!v.cval}<br/><br/>
+</aura:component>

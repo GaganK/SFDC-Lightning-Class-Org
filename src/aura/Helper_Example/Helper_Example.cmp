@@ -1,0 +1,4 @@
+<aura:component >
+    <lightning:button label="Submit" onclick="{!c.show}" />
+    <lightning:button label="Cancel" onclick="{!c.callMe}" />
+</aura:component>

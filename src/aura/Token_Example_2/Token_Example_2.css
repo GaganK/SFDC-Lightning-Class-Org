@@ -1,0 +1,5 @@
+.THIS.two {
+    height: token(myheight);
+    width:token(mywidth);
+    border:token(myborder);
+}

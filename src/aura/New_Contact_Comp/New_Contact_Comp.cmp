@@ -1,0 +1,10 @@
+<aura:component implements="lightning:actionOverride" >
+    <div class="box">
+	<lightning:card iconName="standard:account" title="New Account">
+
+        <lightning:input label="Account Name" />
+        <lightning:input label="Account Phone" />
+        <lightning:input label="Account industry" />
+    </lightning:card>
+   </div>
+</aura:component>

@@ -1,0 +1,13 @@
+<aura:component controller="Customer_Alert_Example">
+    <aura:attribute name="custName" type="String" />
+    <aura:attribute name="email" type="String" />
+    <aura:attribute name="phone" type="String" />
+    <aura:attribute name="body" type="String" />
+    <lightning:card iconName="utility:user" title="Customer">
+        <lightning:input label="Name" value="{!v.custName}" /> 
+        <lightning:input label="Email" value="{!v.email}" /> 
+        <lightning:inputRichText label="body" value="{!v.body}" /> 
+        <lightning:input label="Phone" value="{!v.phone}" /> 
+        <lightning:button label="submit" onclick="{!c.show}" />
+    </lightning:card>
+</aura:component>

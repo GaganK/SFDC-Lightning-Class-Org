@@ -1,0 +1,36 @@
+<apex:page >
+    1. If you want to work with ligthning applications, we need to create the 
+       domain name for the force.com instance 
+    
+    2. Steps to create domain name
+    	Classic : 
+    	Setup
+    	|---> Adminster
+    	      |---> Domain Management 
+    			    |---> My Domain
+    					 
+    	
+    	Lightning 
+    	Setup
+    	|---> Platform Tools
+    		  |---> User Interface 
+    				|---> Sites and Url 
+    					  |---> Sites 
+    
+    	Step 1: Enter Domain 
+    	Step 2: Check the availability
+    	Step 3: Register 
+    	Step 4: After three minutes Login button will be enabled.
+    	Step 5: Click on Login button for testing login using domain
+    	Step 6: Deploy to users 
+    	
+    	Note : Once the domain name is live ,users can log into salesforce account using 
+   				 https://login.salesforce.com
+    				or 
+    			https://domainname.my.salesforce.com 
+    
+    	Note : If you want to prevent the users from the logging into salesforce using 
+   			 https://login.salesforce.com then
+    		
+    		enable Prevent login using https://login.salesforce.com option from My Domain settings.
+</apex:page>

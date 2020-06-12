@@ -1,0 +1,158 @@
+<apex:page >
+    Lighting Attribute:
+    ------------------
+    1. This component is used to define propeties of application,component,event,interface.
+    Attribute :
+    a. access : 	
+    	1. This will specify the scope of the attribute 
+    	2. public : with in the namespace.
+    	3. global : with in the namespace and outside the namespace.
+    b. name :
+    	1. it is string value ,
+    	2. This will define name of the attribute.
+    
+    c. type : 
+    	1. This will specify the datatype of the attribute 
+    	2. It will support all the Basic type (Integer,Decimal ,Date,DateTimwe.....)
+    	3. List ,object ...
+    
+    d. requrired :
+    	1. It is a boolean value .
+    	2. Set as true to make the attribute value as not blank.
+    
+    e. default  : 
+    	1. We can set the default value of a attribute .
+    
+    f. Expression format : 
+    	If you want to reffer to the attribute value in the Component /appliation we use 
+    	<!--
+			{!v.attributeName}
+    		{!v.empName}
+    
+    	-->
+    Example 1: 
+    1. Create a component with empName,salary,exp,city as attributes : Component_Attribue_1.cmp
+    	<!--
+			<aura:component >
+                <aura:attribute name="empName" type="String" />
+                <aura:attribute name="exp" type="Decimal" default="3" />
+                <aura:attribute name="salary" type="Decimal" required="true" />
+                <aura:attribute name="city" type="String" description="name of employee city" />
+                Employee : {! v.empName}  <br/><br/>
+                Experience:{!v.exp} <br/><br/>
+                Salary  : {! v.salary} <br/><br/>
+                City    :{! v.city}
+    
+			</aura:component>
+		-->
+    2. Create a application and invoke the component : Component_Attribute_App_1.app
+    	<!--
+			<aura:application >
+                <c:Component_Attribute_1 empName="Satish Myla" salary="10000" city="Hyd" />
+            </aura:application>
+		-->
+    
+    Example 2: 
+    1. Create a component with studName, age ,city ,place as attributes : Component_Attribute_2.cmp
+    		default value of city is Hyd 
+    		place is required.
+    	<!--
+		<aura:component >
+            <aura:attribute name="stdName" type="String" />
+            <aura:attribute name="age" type="Integer" />
+            <aura:attribute name="city" type="String" default="Hyd" />
+            <aura:attribute name="place" type="String" required="true" />
+            Student Name : {! v.stdName} <br/><br/>  
+            Student Age  : {! v.age} <br/><br/>  
+            Student City : {! v.city} <br/><br/>
+            Student Place:{!v.place}
+		</aura:component>
+
+		-->
+    2. Create a application and invoke the component by passing the data
+    	<!--
+			<aura:application >
+                <c:Component_Attribute_2 stdName="Ravi" age="30" place="SRNagar" />
+            </aura:application>
+		-->
+    
+    Example 3: 
+    1. Create a component Student with following attributes name,branch ,age
+    	Studnet.cmp
+    	<!--
+			<aura:component >
+				<aura:attribute name="name" type="String" />
+				<aura:attribute name="branch" type="String" />
+				<aura:attribute name="age" type="Integer" />
+                    Name: {!v.name} <br/>
+                    Branch:{!v.branch}<br/>
+                    Age  :{!v.age}
+			</aura:component >
+		-->
+    2. Create a component Address with following attributes city ,place,state
+    	Address.cmp
+    	<!--
+			<aura:component >
+				<aura:attribute name="city" type="String" />
+				<aura:attribute name="place" type="String" />
+				<aura:attribute name="state" type="String" />
+                City : {!v.city} <br/>
+                Place :{!v.place} <br/>
+                State :{!v.state}
+			</aura:component >
+		-->
+    3. Create a component StudnetInfo which will invoke the student and address components.
+    	StudentInfo.cmp
+    	<!--
+			<aura:component>
+                <c:student name="Ravi Kiran" branch="CSE" age="30" />
+                <br/><br/>
+                <c:address city="Hyd" place="SRNagar" state="TG" />
+			</aura:component>
+		-->
+    4. Create a application which will invoke studentInfo
+    	StudentInfo.app
+    	<!--
+			<aura:application >
+				<c:StudentInfo />
+			</aura:application>
+		-->
+    
+    Example 4: Passing the values from one component to child component 
+    	1. Basic_Detail.cmp
+    	<!--
+			<aura:component >
+                <aura:attribute name="name" type="String" />
+                <aura:attribute name="age" type="Integer" />
+                Name : {! v.name} <br/>
+                Age  :{!v.age} <br/>
+            </aura:component>
+		-->
+    	2. Address.cmp
+    	<!--
+			<aura:component >
+                 <aura:attribute name="city" type="String" />
+                <aura:attribute name="place" type="String" />
+                City : {!v.city} <br/>
+                Place :{!v.place}<br/>
+            </aura:component>
+		-->
+    	3. Student.cmp
+    	<!--	
+			<aura:component >
+                <aura:attribute name="name" type="String" />
+                <aura:attribute name="age" type="Integer" />
+                <aura:attribute name="city" type="String" />
+                <aura:attribute name="place" type="String" />
+                <c:Basic_Details name="{!v.name}" age="{!v.age}" />
+                <c:Address city="{!v.city}" place="{!v.place}" />
+            </aura:component>
+		-->
+    
+    	4. StudentInfo.app
+    		<!--
+				<aura:application >
+                    <c:student name="Prasad" age="40" city="Hyd" place="SRNagar" />
+                </aura:application>
+			-->
+</apex:page>

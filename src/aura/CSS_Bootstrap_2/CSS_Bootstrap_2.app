@@ -1,0 +1,15 @@
+<aura:application >
+   <ltng:require styles="/resource/satish/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+      scripts="{!join(',', 
+        $Resource.jquery224 , 
+        $Resource.satish + '/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+      }" afterScriptsLoaded="{!c.scriptsLoaded}" /> 
+ <button type="button" class="btn">Basic</button>
+<button type="button" class="btn btn-default">Default</button>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-link">Link</button>
+</aura:application>

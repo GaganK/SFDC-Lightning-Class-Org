@@ -1,0 +1,6 @@
+<aura:component >
+    Product Name : <br/><br/>
+    Product Price: <br/><br/>
+    Product Code : <br/><br/>
+    Product Quantity:
+</aura:component>

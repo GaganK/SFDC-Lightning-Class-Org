@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="aval" type="Integer" />
+    <aura:attribute name="bval" type="Integer" />
+    <aura:attribute name="cval" type="Integer" />
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}" />
+    A  : {!v.aval}  <br/><br/>
+    B  : {!v.bval}  <br/><br/>
+    C  : {!v.cval}
+</aura:component>

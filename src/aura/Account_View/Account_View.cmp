@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="myFields" type="String[]" default="Name,Industry" />
+    <aura:attribute name="sample" type="object" />
+    <aura:attribute name="error" type="String" />
+    <force:recordData aura:id="recId" recordId="{!v.recordId}" fields="{!v.myFields}"
+                      targetFields="{!v.sample}" mode="EDIT" targetError="{!v.error}"/>
+     <div>
+      <!--  Name: <lightning:formattedText value="{!v.sample.Name}" /> <br/><br/>
+       Industry  <lightning:formattedText value="{!v.sample.Industry}" />
+	   -->
+         <lightning:input label="Account Name" value="{!v.sample.Name}" />
+         <lightning:input label="Industry" value="{!v.sample.Industry}" />
+		
+         
+         <lightning:button label="Submit" onclick="{!c.show}" />
+     </div>
+</aura:component>

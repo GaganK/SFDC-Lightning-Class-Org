@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="aval" type="Integer" />
+    <aura:attribute name="bval" type="Integer" />
+    <aura:attribute name="cval" type="Integer" />
+    <div class="box">
+    <lightning:card iconName="standard:account" title="Calculate">
+        <lightning:input label="AVal " value="{!v.aval}" />
+        <lightning:input label="Bval"  value="{!v.bval}" />
+        <lightning:input label="Cval" value="{!v.cval}" />
+        <lightning:button label="Add" onclick="{!c.show}" />
+        <lightning:button label="Cancel" onclick="{!c.invoke}" />
+    </lightning:card>
+     </div>
+</aura:component>

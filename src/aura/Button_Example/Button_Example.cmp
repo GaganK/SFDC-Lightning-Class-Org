@@ -1,0 +1,31 @@
+<aura:component >
+    <lightning:button variant="base" label="submit" />
+     <lightning:button variant="base" label="Base" title="Base action" />
+
+    <!-- Neutral variant (default) -->
+    <lightning:button label="Neutral" title="Neutral action" />
+
+    <!-- Brand variant: Identifies the primary action in a group of buttons -->
+    <lightning:button variant="brand" label="Brand action" title="Brand action"  />
+
+    <!-- Destructive variant: Identifies a potentially negative action -->
+    <lightning:button variant="destructive" label="Destructive" title="Destructive action" />
+
+    <!-- Success variant: Identifies a successful action -->
+    <lightning:button variant="success" label="Success" title="Success" />
+    
+    <lightning:button iconName="utility:settings"  />
+    <lightning:button iconName="utility:up"  variant="base"/>
+    <lightning:button iconName="utility:down" variant="base"/>
+    <lightning:buttonIcon iconName="utility:settings" variant="bare" alternativeText="test" />
+     <lightning:buttonIcon iconName="utility:settings" variant="border" alternativeText="test" size="large"/>
+
+	<lightning:buttonGroup >
+    	<lightning:button variant="Neutral" label="Brand action" title="Brand action"  />
+        <lightning:button variant="Neutral" label="Brand action" title="Brand action"  />
+        <lightning:button variant="Neutral" label="Brand action" title="Brand action"  />
+        <lightning:button variant="Neutral" label="Brand action" title="Brand action"  />
+         <lightning:buttonIcon iconName="utility:down" variant="border" alternativeText="test" size="large"/>
+    
+    </lightning:buttonGroup>
+</aura:component>

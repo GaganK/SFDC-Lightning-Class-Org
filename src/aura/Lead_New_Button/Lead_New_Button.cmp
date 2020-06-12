@@ -1,0 +1,32 @@
+<aura:component implements="flexipage:availableForRecordHome,lightning:actionOverride,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="fldOptions" type="String[]" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="sampleRec" type="Object" />
+    <aura:attribute name="errMsg" type="Object" />
+    <c:Lead_Pick_Values fldOptions="{!v.fldOptions}" objName="Lead" fldName="LeadSource" />
+    <force:recordData aura:id="newLeadId" 
+                      recordId="{!v.recordId}" 
+                      fields="LastName,FirstName,Company,LeadSource,Id"
+                      targetFields="{!v.sampleRec}"
+                      mode="EDIT"
+                      targetError="{!v.errMsg}" />
+    <aura:handler name="init" value="{!this}" action="{!c.callMe}" />
+    <lightning:card iconName="standard:lead" title="New Lead">
+         <aura:set attribute="actions">
+            <lightning:buttonGroup>
+        		<lightning:button label="Cancel" />
+        		<lightning:button label="Edit" />
+        		<lightning:button label="Save" onclick="{!c.invoke}" />
+    		</lightning:buttonGroup>
+        </aura:set>
+        <lightning:input label="Last Name" aura:id="lname"  value="{!v.sampleRec.LastName}" required="true"/>
+        <lightning:input label="First Name" aura:id="fname" value="{!v.sampleRec.FirstName}" />
+        <lightning:input label="Company" aura:id="company" value="{!v.sampleRec.Company}"/>
+        <lightning:select aura:id="source" label="Lead Source" value="{!v.sampleRec.LeadSource}" >
+        	<aura:iteration items="{!v.fldOptions}" var="a">
+            	<option value="{!a}">{!a}</option>
+            </aura:iteration>
+        </lightning:select>
+        
+    </lightning:card>
+</aura:component>

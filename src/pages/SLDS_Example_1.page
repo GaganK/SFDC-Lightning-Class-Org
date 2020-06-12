@@ -1,0 +1,13 @@
+<apex:page >
+    <apex:slds />
+    <div class="slds-box">
+  		<p>This is a regular-sized box.</p>
+	</div>
+   <div class="slds-clearfix">
+  		<div class="slds-clearfix">
+    	<div class="slds-float_left">
+      		<p>I’m floooaaaating</p>
+    	</div>
+  		</div>
+	</div>
+</apex:page>

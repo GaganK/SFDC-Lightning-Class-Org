@@ -1,0 +1,8 @@
+<aura:component>
+    <aura:attribute name="myText" type="string" default="Hello there!"/>
+    <div style="width:400px;padding:50px">
+        <ui:inputText label="Enter some text" class="slds-input" value="{!v.myText}" /> <br/><br/>
+        <lightning:input label="Enter Name" /><br/><br/>
+    Enter City :<input type="text"  class="slds-input"/>
+    </div>
+</aura:component>

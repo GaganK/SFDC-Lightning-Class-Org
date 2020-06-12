@@ -1,0 +1,81 @@
+<apex:page >
+    Style : 
+    ------
+    1. If you want to apply any css on the component we use style from component bundle.
+    2. .THIS : This will reffer to the component 
+    3. .className : This will set he list of properties 
+    
+    Example : 
+    -------------
+    <!--
+		<aura:component >
+            <div>
+                This is Line one <br/> 
+                This is line two <br/>
+                This is line three
+            </div>
+            <div class="box">
+                This is Line one <br/> 
+                This is line two <br/>
+                This is line three
+            </div>
+            <div class="redbox">
+                This is Line one <br/> 
+                This is line two <br/>
+                This is line three
+            </div>
+        </aura:component>
+	-->
+    2. Create a Style 
+    	<!--
+			.THIS {
+                color:red;
+            }
+            .THIS.box{
+                margin-left: 50px;
+                margin-top:100px;
+            }
+            .THIS.redbox{
+                margin-left: 50px;
+                margin-top:50px;
+                width :200px;
+                height:100px;
+                border:1px solid black;
+                color :blue;
+                background:yellow;
+            }
+		-->
+    ============================================================
+    Example :2
+    ==============================================================
+    1. Component 
+    <!--
+		<aura:component >
+            <div class="box">
+                Name  : Satish  <br/>
+                Phone :040-12333<br/>
+                City  :Hyd 
+            </div>
+		</aura:component>
+	-->
+    2. Style 
+    	<!--
+			.THIS.box {
+                width:500px;
+                height:200px;
+                background:white;
+                color :red;
+                border:2px solid grey;
+                margin-left: 100px;
+                margin-top:100px;
+                padding-left:30px;
+                padding-top:30px;
+            }
+		-->
+     3. Application : 
+    	<!--
+			<aura:application >
+                <c:Style_Example_2 />
+            </aura:application>
+		-->
+</apex:page>

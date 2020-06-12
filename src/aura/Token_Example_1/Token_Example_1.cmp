@@ -1,0 +1,8 @@
+<aura:component >
+	<div class="box">
+    	<p> This  is line one </p>
+        <p> This is line two</p>
+    </div>
+    <p> This is line three</p>
+    <p> This is line four</p>
+</aura:component>

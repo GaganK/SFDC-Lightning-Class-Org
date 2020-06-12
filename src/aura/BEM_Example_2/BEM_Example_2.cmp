@@ -1,0 +1,5 @@
+<aura:component access="global">
+	
+    <button  class="slds-button slds-button_success" label="Click me" />
+    <lightning:button label="Submit" variant="success" />
+</aura:component>

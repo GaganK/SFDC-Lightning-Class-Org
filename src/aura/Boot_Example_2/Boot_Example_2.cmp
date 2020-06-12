@@ -1,0 +1,22 @@
+<aura:component >
+  <!--use bootstrap css and jQUERY file in lightning component by using ltng:require component-->
+    <!--<ltng:require styles="{! $Resource.satish + '/bootstrap-3.3.7-dist/css/bootstrap.min.css'}" -->
+    <ltng:require styles="/resource/satish/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+      scripts="{!join(',', 
+        $Resource.jquery224 , 
+        $Resource.satish + '/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+      }" afterScriptsLoaded="{!c.scriptsLoaded}"/>
+   <!--To ensure proper rendering and touch zooming using below meta tag--> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+  
+      <!--Display Buttons part-->  <br/>  
+      <button type="button" class="btn btn-default">Default</button>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-link">Link</button>
+      
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component >
+    <c:App_Event_Search />
+    <c:App_Event_Account />
+    <c:App_Event_Contact />
+</aura:component>

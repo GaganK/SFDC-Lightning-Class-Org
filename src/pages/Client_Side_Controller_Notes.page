@@ -1,0 +1,62 @@
+<apex:page >
+    Client-Side Controller
+    -----------------------
+    1. Every component will have corresponding client side controller.
+    2. it is a javascript file.
+    3. If the name of the component is  "abc.cmp" 
+        then client side controller will have name as "abccontroller.js"
+    
+    4. syntax :
+    	 ({
+    			functionName : function(component,helper,event){
+    				logic 
+    			}	
+    	   }
+    	  )
+    	Example : 
+    		({
+    			show : function(component,helper,event){
+    						loigic
+    			}
+    		})
+    
+    	Example : 
+    		({
+    			invoke : function(component,helper,event){
+    
+    			}
+    		})
+    	
+    	Example : 
+    		({
+    			callMe : function(component,helper,event){
+    
+    			}
+    		})
+    ==============================================================================
+    Example : 1
+    ===============================================================================
+    1. Create Component : JS_Example_1.cmp 
+    	<!--
+			<aura:component >
+                <lightning:button label="Submit" onclick="{!c.show}" />
+            </aura:component>
+		-->
+    
+    2. Client-Side controller :JS_Example_1Controller.js
+    	<!--
+			({
+                show : function(component, event, helper) {
+                    alert('This is invoked');
+                }
+            })
+		-->
+    
+    3. Application : 
+    	<!--
+			<aura:application >
+                <c:JS_Example_1 />
+            </aura:application>
+		-->
+    	
+</apex:page>

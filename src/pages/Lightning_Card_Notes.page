@@ -1,0 +1,97 @@
+<apex:page >
+    Lighting:Card:
+    -------------
+    1. This will create block on the page with pre-defined CSS of SLDS
+    2. This card has four sections 
+    	a. Title 
+    	b. Actions 
+    	c. Body 
+    	d. Footer 
+    3. Attributes 
+    	a. title  : 
+    	   1. It is a text value .
+    	   2. This will be displayed on the left corner of the header .
+    	b. iconName :
+    	   1. It will reffer to any one the standard icon's givne in LDS (Lightnign Desgin System)
+    	   2. iconName are reffered as 
+    			Syntax :groupName :iconName
+    			action : create 
+    			standard :account 
+    			utility:down
+    	c. footer :
+    	   1. It is a text value .
+    	   2. This will be dislayed on the right corner of the footer of the card 
+    	
+    	d. variant :
+    	   1. This will specify the size of the card 
+    	   2. Possible values are base or narrow 
+    	   3  default value is base.
+    
+    	e. actions :
+    	   1. This will specify the action that should be applied on the card.
+    
+    	Note : If want to apply standard slds on the lighting compoenents then 
+    		   application has to extends  <!-- force:slds -->
+     	Note : If you want to  apply any custom Actions or title or footer then we define them 
+ 		 <!--  
+   			<aura:set attribute="title" >
+			<aura:set attribute ="footer" >
+			<aura:set attribute="actions">
+		-->
+    	Example : 
+    	1. Create a component : Card_Example_1
+  <!--
+<aura:component >
+	<lightning:card title="Account">
+        Line one <br/>
+        Line Two
+    </lightning:card>
+    <lightning:card title="Account" iconName="standard:account">
+        Line one <br/>
+        Line Two
+    </lightning:card>
+    <lightning:card title="Account" iconName="standard:account" footer="Testing">
+        Line one <br/>
+        Line Two
+    </lightning:card>
+    <lightning:card title="Account" iconName="standard:account">
+        Line one <br/>
+        Line Two
+        <aura:set attribute="footer">
+            <lightning:button label="submit" />
+            <lightning:button label="cancel" />
+        </aura:set>
+    </lightning:card>
+    <lightning:card title="Account" iconName="standard:account">
+        Line one <br/>
+        Line Two
+        <aura:set attribute="actions">
+        	  <lightning:button label="submit" />
+            <lightning:button label="cancel" />
+        </aura:set>
+    </lightning:card>
+    <lightning:card >
+        <aura:set attribute="title">
+        	<div>
+            	<h2> Account</h2>
+                <h1>New Account</h1>
+            </div>
+        </aura:set>
+        Line one <br/>
+        Line Two
+        <aura:set attribute="actions">
+        	  <lightning:button label="submit" />
+            <lightning:button label="cancel" />
+        </aura:set>
+    </lightning:card>
+</aura:component>
+
+-->
+    2. Create a application :Card_Example_1_App.app
+    <!--
+        <aura:application extends="force:slds">
+            <c:Card_Example_1 />	
+        </aura:application>
+
+	-->
+</apex:page>

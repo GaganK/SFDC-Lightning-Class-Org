@@ -1,0 +1,7 @@
+<aura:component implements="lightning:actionOverride" >
+	 <lightning:card iconName="standard:account" title="Account" >
+         Example <br/>
+         Example<br/>
+         Example<br/>
+    </lightning:card> 
+</aura:component>

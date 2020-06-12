@@ -1,0 +1,4 @@
+<design:component label="Componet for Flow">
+    <design:attribute name="greeting" label="greeting"  default="Hello"  />
+    <design:attribute name="subject" label="subject" default="World"  />
+</design:component>

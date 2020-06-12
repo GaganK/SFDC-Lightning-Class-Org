@@ -1,0 +1,7 @@
+.THIS.myClass {
+    font-family: token_1(divFont);
+    font-weight: token_1(divFontWeight);
+    background-color: token_1(divBackgroundColor);
+    color: token_1(divTextColor);
+    margin: token_1(divMargin);
+}

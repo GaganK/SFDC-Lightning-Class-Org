@@ -1,0 +1,81 @@
+<apex:page >
+  
+    Lightning App : 
+    ---------------
+    1. It is a collection of Components .
+    2. Every Lightning application will start and end with <!-- aura:application -->
+    3. This is also called as SPA (Single Page Application )
+    4. Lightning application will have extention of ".app"
+    5. Url of the lightning application will be 
+    	https://mydomainname/namespace/appliacationname.app	
+    
+    6. Steps to create Lightning application :
+    	Developer Console 
+    	|---->File 
+    		 |---> New 
+    			   |---> Lightning Application 
+    					 
+		Step 1: Enter Application Name : Application_1
+		Step 2: Create   
+    
+    Atrributes : 
+    a. access	: 
+    	1. This will specify the scope of the application .
+    	2. Possible values are public ,global 
+    	3. public  : If we define access as scope ,this application can be extended any where with in 
+    				 the name space 
+    	4. global  : If we define access as global ,this applicaiton can be extended within the namespace 
+    				 and outside the namespace.
+    	5. default access is public .
+    
+    b. controller :
+    	1. This will specify the name of the apex class which we want to reffer in the application
+    	2. We can define only one apex class as Controller.
+    
+    c. description : 	
+    	1. This is a string value .
+    	2. This is used to define the description about the applicaiton .
+    
+    d. extends  :
+    	1. This will specify the name of the application which you want to extend with in this application
+    	2. We can only extend one application 
+    	3. Syntax : 
+    		extends="namespace:applicationname"
+    	
+    e. extensible :
+    	1. This is a boolean value 
+    	2. When set as true ,this application can be extended by other applications.
+    	3. When set as false,this application cannot be extended 
+    
+    f. implements : 
+    	1. This will specify the name of the interfaces which you want to implement in the 
+    	   application.
+    	2. Application can implements more  than one interface.
+    
+    g. template : 
+    	1. Name of the template to be loaded in the application .
+    
+    h. token  : 
+    	1. List of token names which we want to apply in the application.
+  
+    
+    Example : Create a Application First_App.app
+    <!--
+		<aura:applicaiton>
+            <h1> This is first page </h1>
+            <h1> This is second page</h1>
+		</aura:application>
+
+	-->
+    Example : Create an application Second_App.app
+    <!--
+		<aura:application>
+			<div>
+				This is div one 	
+			</div>
+			<div>
+				This is div two
+			</div>
+		 </aura:application>
+	-->
+</apex:page>

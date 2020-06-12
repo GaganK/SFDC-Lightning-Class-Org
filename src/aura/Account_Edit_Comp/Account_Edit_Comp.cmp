@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="sample" type="object" />
+    <aura:attribute name="error" type="String" />
+    <force:recordData aura:id="recId" recordId="{!v.recordId}" targetFields="{!v.sample}" 
+                      mode="EDIT" fields="Name,Phone,Industry" recordUpdated="{!c.handleRecordUpdated}" />
+    <lightning:card iconName="standard:account" title="Account" >
+        <lightning:input label="AccountName" value="{!v.sample.Name}" />
+        <lightning:input label="Account Phone" value="{!v.sample.Phone}" />
+        <lightning:input label="Industry" value="{!v.sample.Industry}" />
+        <lightning:button label="Submit" onclick="{!c.show}" />
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,12 @@
+<aura:component controller="Opty_Data">
+    <aura:attribute name="columns" type="object" />
+    <aura:attribute name="myData" type="list" />
+    <aura:handler name="init" value="{!this}" action="{!c.show}" />
+    <div style="height: 300px">
+        <lightning:datatable
+                keyField="id"
+                data="{! v.myData }"
+                columns="{! v.columns }"
+                hideCheckboxColumn="false"/>
+    </div>
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component controller="App_Event_Account_Search">
+    <aura:attribute name="con" type="Contact" />
+    <aura:handler event="c:App_Event_Two" action="{!c.callMe}" />
+    <div class="box">
+        <lightning:input label="Last Name" value="{!v.con.LastName}" /> <br/>
+        <lightning:input label="First Name" value="{!v.con.FirstName}" /><br/>
+        <lightning:input label="Phone" value="{!v.con.phone}" />
+    </div>
+</aura:component>

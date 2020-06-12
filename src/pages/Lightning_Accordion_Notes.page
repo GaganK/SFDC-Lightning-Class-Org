@@ -1,0 +1,67 @@
+<apex:page >
+    Lightning_Accordion:
+    ---------------------
+    1. This component is defined under lightning namespace.
+    2. This will create vertical sections on the page 
+    3. This component is a counter part of panelbar in visualforce.
+    4. This component has built in slds applied ,
+    5. Application should extend <!-- force:slds --> to get standard look and feel 
+    6. Attributes : 
+    	a. title : 
+    	   1. This is a text value .
+    	   2. When we keep the cursor on the component ,pop-up will show this title
+    	b. activeSectionName :
+    	   1. This is a text value .
+    	   2. This will take the name of the accordionSection element whoes body should be displayed by default.
+    
+    Lightning_AccordionSection :
+    ------------------------------
+    1. This component is defined under ligthning namespace.
+    2. This is a child component of accordion 
+    3. Attribute 
+    	a. Label : 
+    	   1. This is a text message .
+    	   2. This will be displayed as title for the section on the header of section
+    
+    	b. name  : 
+    		1. This is a text value .
+    		2. Name will be used to reffer to the section in the component .
+    
+    	c. actions : 
+    		1. This will specify the actions for the sections
+    
+    	Note : if you want to define custom actions then use <!-- aura:set attribute="actions" -->
+    
+    Example :1 Create a compoentn : Accordion_Example_1.cmp
+    <!--
+		<aura:component >
+            <lightning:accordion    >
+                <lightning:accordionSection label="Account Details" name="a">
+                    Account Name : <br/>
+                    Account Indsutry :<br/>
+                    Account Phone :<br/>
+                </lightning:accordionSection>
+                <lightning:accordionSection label="Contact Details" name="b">
+                    Last Name : <br/>
+                    FirstName :<br/>
+                    Phone :<br/>
+                </lightning:accordionSection>
+                <lightning:accordionSection label="Opportunity Details" name="c">
+                    Opportunity Name : <br/>
+                    StageName :<br/>
+                    CloseDate:<br/>
+                    <aura:set attribute="actions">
+                        <lightning:button label="submit" />
+                        <lightning:button label="Cancel" />
+                    </aura:set>
+                </lightning:accordionSection>
+            </lightning:accordion>
+		</aura:component>
+-->
+    2. Create a application : Accordion_Example_1.app
+    <!--
+		<aura:application extends="force:slds">
+            <c:Accordion_Example_1 />
+        </aura:application>
+	-->
+</apex:page>

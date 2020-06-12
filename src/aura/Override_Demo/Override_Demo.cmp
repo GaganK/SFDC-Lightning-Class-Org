@@ -1,0 +1,11 @@
+<aura:component implements="lightning:actionOverride" >
+    <aura:attribute name="opty" type="object" />
+    <lightning:card iconName="standard:account" title="Example">
+    	<aura:set attribute="title">
+            <lightning:button label="submit" />
+        </aura:set>
+        <lightning:input label="Name" value="{!v.opty.Name}" />
+        <lightning:input label="Stage" value="{!v.opty.stageName}" />
+    </lightning:card>
+	
+</aura:component>

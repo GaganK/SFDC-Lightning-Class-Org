@@ -1,0 +1,23 @@
+<aura:component >
+	<lightning:accordion    >
+    	<lightning:accordionSection label="Account Details" name="a">
+            Account Name : <br/>
+            Account Indsutry :<br/>
+            Account Phone :<br/>
+        </lightning:accordionSection>
+        <lightning:accordionSection label="Contact Details" name="b">
+            Last Name : <br/>
+            FirstName :<br/>
+            Phone :<br/>
+        </lightning:accordionSection>
+        <lightning:accordionSection label="Opportunity Details" name="c">
+            Opportunity Name : <br/>
+            StageName :<br/>
+            CloseDate:<br/>
+            <aura:set attribute="actions">
+                <lightning:button label="submit" />
+                <lightning:button label="Cancel" />
+            </aura:set>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>

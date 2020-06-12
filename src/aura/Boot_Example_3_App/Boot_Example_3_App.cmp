@@ -1,0 +1,18 @@
+<aura:component >
+	<ltng:require styles="/resource/satish/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+      scripts="{!join(',', 
+        $Resource.jquery224 , 
+        $Resource.satish + '/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+      }" afterScriptsLoaded="{!c.scriptsLoaded}"/>
+   
+     
+      
+       <!--Display Navigation menu part-->  
+      <ul class="nav nav-tabs">
+         <li class="active"><a href="#">Home</a></li>
+         <li><a href="#">Menu 1</a></li>
+         <li><a href="#">Menu 2</a></li>
+         <li><a href="#">Menu 3</a></li>
+      </ul>
+  
+</aura:component>

@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="stdName" type="String" />
+    <aura:attribute name="age" type="Integer" />
+    <aura:attribute name="city" type="String" default="Hyd" />
+    <aura:attribute name="place" type="String" required="true" />
+    Student Name : {! v.stdName} <br/><br/>  
+    Student Age  : {! v.age} <br/><br/>  
+    Student City : {! v.city} <br/><br/>
+    Student Place:{!v.place}
+</aura:component>

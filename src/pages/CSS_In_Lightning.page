@@ -1,0 +1,277 @@
+<apex:page >
+    <!--
+		CSS : cascading style sheets :
+---------------------------------
+1. There are three types of CSS 
+   a. Inline 
+   b. External 
+   c. Style class 
+
+2. Inline :
+	<aura:component>
+  	  <div style="background-color:black ; margin:12px">
+    		<p style="color:white">white Text with black Background [Inline CSS]</p>
+    		<p style="color:yellow">Yellow Text with black Background [Inline CSS]</p>  
+  	  </div>
+	</aura:component>
+
+3. External CSS : 
+	Demo.css :
+
+	p{
+     		font-size:20px;
+     		color:red;
+     		background-color:black;
+   	}
+  
+  	.divStyle{
+       		background-color:lightgreen;
+       		color:white;
+       		padding:20px; 
+     	}
+
+	Example :
+	<aura:component>
+  		<ltng:require styles="{!$Resource.demoCss}"/>
+ 		<p>this is p element</p>
+   		<div class="divStyle">
+     			this is div text with divStyle style class, 
+			which is come from external css file.
+   		</div>
+	</aura:component>
+ 
+
+4. Example 1: Top Level Elements 
+<aura:component >
+    <h1>This is top level heading</h1>
+    <p>This is top level Paragraph elements</p>
+    <div>
+      <h1>This is nested level (wrap in div) heading</h1>
+      <p>This is nested level (wrap in div) Paragraph elements</p>
+    </div>
+</aura:component>
+
+CSS :
+	h1.THIS  {
+    		color: Red;
+    		font-weight: bold;
+	}
+ 
+	p.THIS {
+    		color:blue;
+    		font-weight: bold;
+	}
+
+Example :2 
+<aura:component >
+    <h1>This is top level heading</h1>
+    <p>This is top level Paragraph elements</p>
+    <div>
+      <h1>This is nested level (wrap in div) heading</h1>
+      <p>This is nested level (wrap in div) Paragraph elements</p>
+    </div>
+</aura:component>
+
+CSS : 
+	.THIS h1{
+    		color: Red;
+    		font-weight: bold;
+	}
+ 
+	.THIS p{
+    		color:blue;
+    		font-weight: bold;
+	}
+ 
+Example : 3 
+	<aura:component >
+   	  <div class="divCss">
+      	    <h1>Hello Developers's</h1>
+      	    <p>This is sample HTML Paragraph in a DIV elelment.</p>
+   	  </div>
+    	  <p>This is a sample HTML paragraph.<span>with a span element</span></p>  
+	</aura:component>
+
+     CSS  : 
+     p.THIS {
+    	    color: blue;
+    	    font-weight: bold;
+      }
+ 
+    .divCss.THIS {
+    	padding: 20px;
+    	background-color: yellow;
+    }
+   .THIS H1 {
+    	color: green;
+    	font-size: 22px;
+    } 
+   .THIS p {
+    	color: red;
+    	font-weight: lighter;
+    }
+
+Example :4
+
+<aura:component>
+    <h1 class="h1Class">This is top level heading</h1>
+    <p class="PClass">This is top level Paragraph elements</p>
+    <div>
+      <h1 class="h1Class">This is nested level (wrap in div) heading</h1>
+      <p class="PClass">This is nested level (wrap in div) Paragraph elements</p>
+    </div>
+</aura:component>
+
+CSS : 
+	.h1Class.THIS {
+    		color: Red;
+    		font-weight: bold;
+	}
+ 
+	.PClass.THIS {
+    		color: Blue;
+    		font-weight: bold;
+	}
+
+Example :5 
+ <aura:component>
+    <h1 class="h1Class">This is top level heading</h1>
+    <p class="PClass">This is top level Paragraph elements</p>
+    <div>
+      <h1 class="h1Class">This is nested level (wrap in div) heading</h1>
+      <p class="PClass">This is nested level (wrap in div) Paragraph elements</p>
+    </div>
+</aura:component>
+
+CSS : 
+	.THIS .h1Class {
+    		color: Red;
+    		font-weight: bold;
+	}
+ 
+	.THIS .PClass {
+    		color: Blue;
+    		font-weight: bold;
+	}
+ 
+
+Example : 6 
+<aura:component>
+    <p id="myName">My Name is Jhon Cena.</p>
+    <p>My Name is roman reigns</p>
+    <p id="myName">My Name is dean ambrose</p>
+</aura:component>
+
+.THIS#myName {
+    color: White;
+    background-color:black;
+    font-weight: bold;
+}
+ 
+Bootstarp:
+----------
+<ltng:require styles="/resource/satish/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+      scripts="{!join(',', 
+        $Resource.jquery224 , 
+        $Resource.satish + '/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+      }" afterScriptsLoaded="{!c.scriptsLoaded}" />
+
+==> Menu Example : 
+<aura:component >
+  
+    <ltng:require styles="/resource/satish/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+      scripts="{!join(',', 
+        $Resource.jquery224 , 
+        $Resource.satish + '/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+      }" afterScriptsLoaded="{!c.scriptsLoaded}" />
+   
+      <ul class="nav nav-tabs">
+         <li class="active"><a href="#">Home</a></li>
+         <li><a href="#">Menu 1</a></li>
+         <li><a href="#">Menu 2</a></li>
+         <li><a href="#">Menu 3</a></li>
+      </ul>
+
+</aura:component>
+
+
+==> Button Example : 
+<aura:component >
+  
+    <ltng:require styles="/resource/satish/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+      scripts="{!join(',', 
+        $Resource.jquery224 , 
+        $Resource.satish + '/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+      }" afterScriptsLoaded="{!c.scriptsLoaded}" />
+   
+      <button type="button" class="btn btn-default">Default</button>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-link">Link</button>
+
+</aura:component>
+
+==> Table : 
+<aura:component >
+    <ltng:require styles="/resource/satish/bootstrap-3.3.7-dist/css/bootstrap.min.css"
+      scripts="{!join(',', 
+        $Resource.jquery224 , 
+        $Resource.satish + '/bootstrap-3.3.7-dist/js/bootstrap.min.js')
+      }" afterScriptsLoaded="{!c.scriptsLoaded}" />
+	<table class="table table-striped">
+         <thead>
+            <tr>
+               <th>Firstname</th>
+               <th>Lastname</th>
+               <th>Email</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>John</td>
+               <td>Doe</td>
+               <td>john@example.com</td>
+            </tr>
+            <tr>
+               <td>Mary</td>
+               <td>Moe</td>
+               <td>mary@example.com</td>
+            </tr>
+            <tr>
+               <td>July</td>
+               <td>Dooley</td>
+               <td>july@example.com</td>
+            </tr>
+         </tbody>
+      </table>
+</aura:component>
+
+Model : 
+ <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+     
+      <div id="myModal" class="modal fade" role="dialog">
+         <div class="modal-dialog">
+           
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+               </div>
+               <div class="modal-body">
+                  <p>Some text in the modal.</p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+
+	-->
+</apex:page>

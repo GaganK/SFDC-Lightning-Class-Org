@@ -1,0 +1,12 @@
+<aura:component >
+	<div class="box">
+        <lightning:input label="Label Name" aura:id="lname" />
+        <br/>
+        <lightning:input label="First Name" aura:id="fname" />
+        <br/>
+        <lightning:input label="Name" aura:id="name" />
+        <br/>
+        <lightning:button label="submit" onclick="{!c.show}" />
+        <lightning:button label="Cancel" onclick="{!c.call}" />
+    </div>
+</aura:component>
